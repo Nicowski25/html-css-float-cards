@@ -23,6 +23,7 @@
 .container {
     width: 80%; 
     margin: 0 auto;
+
 }
 
 .presentation {
@@ -33,29 +34,33 @@
 .team .card {
     float: left;
     width: calc(100% / 3);
-    height: 150px;
+    padding: 0px 15px;
     background-color: var(--tb-black);
 }
 
 .container .card img {
-    height: 100px;
+    height: 90px;
     float: left;
 }
 
 
-.debug .card {
-/*    height: 100px;
+/* .debug .card {
+    height: 100px;
     background-color: var(--tb-black);
     border: 15px solid white;
-    padding: 20px; */
-}
+    padding: 20px; 
+} */
 
 .email {
     color: var(--tb-email);
-    margin: 2px;
 }
 
 .work,.name {
     color: var(--tb-white);
 }
 
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
