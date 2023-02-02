@@ -1,17 +1,18 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- */
+
 :root {
     --tb-title: violet ;
-    --tb-email: blue; 
+    --tb-email: rgb(45, 94, 185); 
     --tb-black: black;
+    --tb-white: white;
 }
 
 #head {
-    margin: 0 20px;
+    margin: 20px;
 }
 
 #title {
@@ -20,21 +21,41 @@
 }
 
 .container {
-    width: 80%;
-    text-align: center;
+    width: 80%; 
     margin: 0 auto;
+}
+
+.presentation {
+    margin: 40px 0px;
+    text-align: center;
 }
 
 .team .card {
     float: left;
     width: calc(100% / 3);
+    height: 150px;
+    background-color: var(--tb-black);
 }
+
+.container .card img {
+    height: 100px;
+    float: left;
+}
+
 
 .debug .card {
-    height: 100px;
+/*    height: 100px;
     background-color: var(--tb-black);
-    border: 1px solid white;
-    padding: 20px;
+    border: 15px solid white;
+    padding: 20px; */
 }
 
+.email {
+    color: var(--tb-email);
+    margin: 2px;
+}
+
+.work,.name {
+    color: var(--tb-white);
+}
 
