@@ -1,3 +1,4 @@
+/* #region Common Rules */
 * {
     margin: 0;
     padding: 0;
@@ -5,62 +6,132 @@
 }
 
 :root {
-    --tb-title: violet ;
-    --tb-email: rgb(45, 94, 185); 
-    --tb-black: black;
-    --tb-white: white;
+    --tm-dark: #051930;
+    --tm-light: white;
+    --tm-primary: #9c1e48;
+    --tm-secondary: #45abea;
+    --tm-email: #3178e4;
 }
 
-#head {
-    margin: 20px;
+ h1 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--tm-primary);
+    padding-bottom: 2rem;
 }
 
-#title {
-    color: var(--tb-title);
-    text-align: center;
+body {
+    font-family: 'Fredoka', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
+/* #endregion Common Rules */
+
+/* #region Debug */
+.debug > #app-header {
+    height: 200px;
+    background-color: pink;
+    }
+
+.debug > #app-main {
+    height: 800px;
+    background-color: rgb(15, 68, 121);
+}
+
+.debug > #app-footer {
+    height: 200px;
+    background-color: pink;
+    }
+
+.debug .card {
+    height: 120px;
+    background-color: yellow;
+}
+
+.debug .image {
+    width: 30%;
+    height: 120px;
+    background-color: red;
+}
+
+.debug .details {
+    height: 120px;
+    background-color: blue;
+}
+
+/* #endregion Debug */
+
+/* #region utilities */
 .container {
-    width: 80%; 
-    margin: 0 auto;
-
+    max-width: 1140px;
+    margin: auto;
 }
 
-.presentation {
-    margin: 40px 0px;
-    text-align: center;
+.row {
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
-.team .card {
-    float: left;
-    width: calc(100% / 3);
-    padding: 0px 15px;
-    background-color: var(--tb-black);
-}
-
-.container .card img {
-    height: 90px;
-    float: left;
-}
-
-
-/* .debug .card {
-    height: 100px;
-    background-color: var(--tb-black);
-    border: 15px solid white;
-    padding: 20px; 
-} */
-
-.email {
-    color: var(--tb-email);
-}
-
-.work,.name {
-    color: var(--tb-white);
-}
-
+.row::after,
 .clearfix::after {
     content: '';
     display: table;
     clear: both;
+}
+
+.col-4 {
+    float: left;
+    width: calc((100% / 12) * 4);
+    padding: 1rem;
+}
+
+.left {
+     float: left;
+}
+
+.p-1 {
+     padding: 1rem;
+}
+
+.intro {
+    font-size: 1.25rem;
+}
+
+.py1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* #endregion utilities */
+
+/* #region header */
+#app-header {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--tm-dark);
+    color: var(--tm-light);
+    box-shadow: 0px 5px 5px 3px var(--tm-dark);
+}
+
+/* #endregion header */
+
+/* Main */
+.card > .image {
+    width: calc(100% / 3);
+}
+
+.card {
+    background-color: var(--tm-dark);
+    color: white;
+    box-shadow: 5px 5px 10px 0px var(--tm-dark);
+}
+
+#app-main {
+    margin: 4rem;
+}
+
+.email {
+    color: var(--tm-email);
 }
